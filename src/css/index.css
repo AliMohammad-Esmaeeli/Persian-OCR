@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: yekanBakh;
+    src: url(../assets/fonts/YekanBakh.ttf);
+}
+
+@layer utilities {
+    .font-yekanBakh {
+        font-family: yekanBakh;
+        @apply text-base text-[#0d3c2c];
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .upload-component{
+        @apply  rounded-[0.875rem] border-[#d2b99f] border-dashed border-2 flex-center gap-3;
+    }
+    .rtl{
+        direction: rtl;
+    }
+}
