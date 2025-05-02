@@ -2,7 +2,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, addToast
 import lang from "../../locales/fa.json";
 
 import shareSvg from "../../assets/svgs/share.svg";
-import shareBlackSvg from "../../assets/svgs/share.svg";
+import shareBlackSvg from "../../assets/svgs/share-black.svg";
 import copySvg from "../../assets/svgs/copy.svg";
 
 export default function ShareButton(Text: any) {
