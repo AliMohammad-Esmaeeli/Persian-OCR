@@ -74,8 +74,8 @@ Both the file input and ```onDrop``` provide a file, which you pass to the OCR f
     }}
 ```
 ## What is the OCR Function?
-[!NOTE]
-We use [Tesseract.js](https://github.com/naptha/tesseract.js), a powerful library that supports **100+ languages** and works with many programming languages.
+> [!NOTE]
+> We use [Tesseract.js](https://github.com/naptha/tesseract.js), a powerful library that supports **100+ languages** and works with many programming languages.
 
 ```tsx
     const OCR = async (Image: any) => {
