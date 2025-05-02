@@ -4,6 +4,12 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, addToast
 import lang from "../../locales/fa.json";
 import { createWorker } from 'tesseract.js';
 
+import uploadSvg from "../../assets/svgs/upload.svg";
+import addSvg from "../../assets/svgs/add.svg";
+import shareSvg from "../../assets/svgs/share.svg";
+import shareBlackSvg from "../../assets/svgs/share.svg";
+import copySvg from "../../assets/svgs/copy.svg";
+
 export default function Input() {
     const inputFileRef = useRef<HTMLInputElement>(null);
     const [inputImage, setInputImage] = useState<string | null>();
@@ -54,13 +60,13 @@ export default function Input() {
                         page === "title" ?
                             <>
                                 <span className="flex-center flex-row-reverse gap-3">
-                                    <img className="size-7" src="/svgs/upload.svg" alt="" />
+                                    <img className="size-7" src={uploadSvg} alt="" />
                                     <p className="text-base md:text-lg lg:text-xl truncate">{lang.uploadFile}</p>
                                 </span>
                                 <p className="text-base md:text-lg lg:text-lg text-blue-300 truncate">{lang.clickIt}</p>
                             </> : page == "hover" ?
                                 <span className="flex-center flex-row-reverse gap-3">
-                                    <img className="size-7 fill-white" src="/svgs/add.svg" alt="" />
+                                    <img className="size-7 fill-white" src={addSvg} alt="" />
                                     <p className="text-base md:text-lg lg:text-xl truncate">{lang.dropFile}</p>
                                 </span>
                                 :
@@ -88,7 +94,7 @@ export default function Input() {
                                     className="!py-6 px-8 rounded-xl shadow-2xl bg-blue-600 mt-4 flex-center gap-2"
                                 >
 
-                                    <img className="size-6 stroke-white" src="/svgs/share.svg" alt="" />
+                                    <img className="size-6 stroke-white" src={shareSvg} alt="" />
                                     <p className="text-white">{lang.share}</p>
                                 </Button>
                             </DropdownTrigger>
@@ -103,7 +109,7 @@ export default function Input() {
                                         )
                                     }}>
                                     <span className="text-black text-base font-yekanBakh flex-center flex-row-reverse gap-2">
-                                        <img className="size-5 stroke-white" src="/svgs/share-black.svg" alt="" />
+                                        <img className="size-5 stroke-white" src={shareBlackSvg} alt="" />
                                         <p>{lang.share}</p>
                                     </span>
                                 </DropdownItem>
@@ -120,7 +126,7 @@ export default function Input() {
                                         })
                                     }}>
                                     <span className="text-black text-base font-yekanBakh flex-center flex-row-reverse gap-2">
-                                        <img className="size-5 stroke-black" src="/svgs/copy.svg" alt="" />
+                                        <img className="size-5 stroke-black" src={copySvg} alt="" />
                                         <p>{lang.copy}</p>
                                     </span>
                                 </DropdownItem>
