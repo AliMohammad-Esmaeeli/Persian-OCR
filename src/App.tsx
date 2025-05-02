@@ -1,5 +1,5 @@
 import Footer from "./components/footer";
-import Input from "./components/Input_component/input";
+import Input from "./components/Input_components/input";
 
 
 export default function App() {
