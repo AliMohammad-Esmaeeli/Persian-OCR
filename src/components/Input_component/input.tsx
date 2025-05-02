@@ -14,7 +14,7 @@ export default function Input() {
         const worker = await createWorker("fas");
         const result = await worker.recognize(Image);
         setText(result.data.text);
-        worker.terminate();
+        await worker.terminate();
     }
 
     {/* Input component */ }
