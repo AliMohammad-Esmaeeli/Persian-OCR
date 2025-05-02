@@ -20,7 +20,7 @@ export default function Input() {
     {/* Input component */ }
     return (
         <>
-            <div className="flex-center flex-col md:flex-row gap-5 w-screen">
+            <div className="flex-center flex-col md:flex-row gap-5 w-screen mt-[26vh]">
                 <div
                     className="upload-component bg-white w-[80vw] md:w-[60vw] lg:w-[35vw] h-56 md:h-60 flex-col overflow-hidden"
                     onClick={(e) => {
