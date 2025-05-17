@@ -10,7 +10,10 @@ export default function ShareButton(Text: any) {
         <>
             <Dropdown>
                 <DropdownTrigger>
-                    <Button>
+                    <Button
+                        variant="bordered"
+                        className="button"
+                    >
                         <img className="size-6 stroke-white" src={shareSvg} alt="" />
                         <p className="text-white">{lang.share}</p>
                     </Button>
