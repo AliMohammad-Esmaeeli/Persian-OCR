@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import OCR from "./OCR";
+import OCR from "../Process/OCR";
 
 interface FileInputProps {
     inputFileRef: React.RefObject<HTMLInputElement>;

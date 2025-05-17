@@ -1,4 +1,5 @@
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button, addToast } from "@heroui/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, addToast } from "@heroui/react";
+import _Button from "./button.component";
 import lang from "../../locales/fa.json";
 
 import shareSvg from "../../assets/svgs/share.svg";
@@ -10,14 +11,10 @@ export default function ShareButton(Text: any) {
         <>
             <Dropdown>
                 <DropdownTrigger>
-                    <Button
-                        variant="bordered"
-                        className="!py-6 px-8 rounded-xl shadow-2xl bg-blue-600 mt-4 flex-center gap-2"
-                    >
-
+                    <_Button>
                         <img className="size-6 stroke-white" src={shareSvg} alt="" />
                         <p className="text-white">{lang.share}</p>
-                    </Button>
+                    </_Button>
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Static Actions">
                     <DropdownItem key="share"
