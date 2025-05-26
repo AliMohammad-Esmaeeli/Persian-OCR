@@ -4,5 +4,11 @@
   "dropFile": "فایل را رها کنید",
   "copy": "کپی کنید",
   "share": "اشتراک گذاری",
-  "copyedSuccessfully": "با موفقیت کپی شد"
+  "copyedSuccessfully": "با موفقیت کپی شد",
+  "translate": "ترجمه کردن",
+  "translated": "ترجمه شده",
+  "summarize": "خلاصه کردن",
+  "summarized": "خلاصه شده",
+  "choiceLang": "زبان را انتخاب کنید",
+  "github": "گیت هاب"
 }
