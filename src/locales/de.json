@@ -1,14 +1,16 @@
 {
-  "uploadFile": "Bild zum Hochladen hierher ziehen",
-  "clickIt": "oder hier klicken",
-  "dropFile": "Datei ablegen",
+  "uploadFile": "Ziehen Sie Ihr Bild hierher zum Hochladen",
+  "clickIt": "oder klicken Sie hier",
+  "dropFile": "Legen Sie die Datei hier ab",
   "copy": "Kopieren",
   "share": "Teilen",
   "copyedSuccessfully": "Erfolgreich kopiert",
+  "text": "Text:",
   "translate": "Übersetzen",
-  "translated": "Übersetzt",
+  "translated": "Übersetzt:",
   "summarize": "Zusammenfassen",
-  "summarized": "Zusammengefasst",
+  "summarized": "Zusammengefasst:",
   "choiceLang": "Sprache wählen",
-  "github": "GitHub"
+  "github": "GitHub",
+  "summarizePopover": "Verwendet Gemini KI, um zusammenzufassen."
 }

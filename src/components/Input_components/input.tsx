@@ -1,91 +1,77 @@
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
 
-import uploadSvg from "../../assets/svgs/upload.svg";
-import addSvg from "../../assets/svgs/add.svg";
+// Importing dependencies
+import useTextStore from "../../state management/store";
+// import { summarizeText, translateText } from "../Process/TextProcessor";
+import { useLanguage } from "../../locales/locales";
 
-import OCR from "./OCR";
-import ShareButton from "./shareButton";
+// Importing components
+import ShareButton from "../Button/shareButton";
 import FileInput from "./fileInput";
-import lang from "../../locales/fa.json";
+
+// Importing SVGs
+import Drag_and_Drop from "./drag&drop";
+import SummarizeButton from "../Button/SummarizeButton";
+// import TranslateButton from "../Button/TranslateButton";
 
 export default function Input() {
-    const inputFileRef = useRef<HTMLInputElement>(null);
-    const [inputImage, setInputImage] = useState<string | null>();
-    const [page, setPage] = useState("title");
-    const [text, setText] = useState<string | null>()
+  const { translations } = useLanguage();
+  const inputFileRef = useRef<HTMLInputElement>(null);
+  const [inputImage, setInputImage] = useState<string | null>();
+  const [page, setPage] = useState("title");
 
+  const { text, setText, summary, translation } =
+    useTextStore();
 
+  // setTargetLanguage,
 
-    {/* Input component */ }
-    return (
-        <>
-            <div className="flex-center flex-col md:flex-row gap-5 w-screen mt-[26vh]">
-                <div
-                    className="upload-component bg-white w-[80vw] md:w-[60vw] lg:w-[35vw] h-56 md:h-60 flex-col overflow-hidden"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        inputFileRef.current?.click()
-                    }}
-                    onDragOver={(e) => {
-                        e.preventDefault();
-                        setPage("hover")
-                    }}
-                    onDragLeave={(e) => {
-                        e.preventDefault();
-                        setPage("title")
-                    }}
-                    onDrop={(e) => {
-                        e.preventDefault();
-                        const files = e.dataTransfer.files;
+  return (
+    <>
+      <div className="flex-center flex-col md:flex-row gap-5 w-screen">
+        {/* Drag & Drop component */}
+        <Drag_and_Drop
+          inputFileRef={inputFileRef}
+          setInputImage={setInputImage}
+          inputImage={inputImage}
+          page={page}
+          setPage={setPage}
+          setText={setText}
+        />
 
-                        if (files.length > 0) {
-                            const file = files[0];
-                            OCR(file, setText)
+        {/* Display recognized text */}
+        {text && (
+          <div className="w-1/2 flex flex-col">
+            <div className="rtl flex flex-col gap-3">
+              {text && <p className="text-xl">{translations.text}</p>}
+              <p className="text-base leading-8"> {text} </p>
 
-                            const fileURL = URL.createObjectURL(file);
-                            setInputImage(fileURL)
-                            setPage("show")
-                        }
-                    }}
-                >
+              {/* Displaying the summary and translation */}
 
-                    {
-                        page === "title" ?
-                            <>
-                                <span className="flex-center flex-row-reverse gap-3">
-                                    <img className="size-7" src={uploadSvg} alt="" />
-                                    <p className="text-base md:text-lg lg:text-xl truncate">{lang.uploadFile}</p>
-                                </span>
-                                <p className="text-base md:text-lg lg:text-lg text-blue-300 truncate">{lang.clickIt}</p>
-                            </> : page == "hover" ?
-                                <span className="flex-center flex-row-reverse gap-3">
-                                    <img className="size-7 fill-white" src={addSvg} alt="" />
-                                    <p className="text-base md:text-lg lg:text-xl truncate">{lang.dropFile}</p>
-                                </span>
-                                :
-                                inputImage && <img src={inputImage} alt="" />
+              {summary && <p className="text-xl">{translations.summarized}</p>}
+              {summary && <p className="text-base leading-8">{summary}</p>}
 
-                    }
-
-                </div>
-
-                {
-                    text &&
-                    <div className="rtl w-1/2 ">
-                        <p className="text-base leading-8">
-                            {text}
-                        </p>
-                        <ShareButton Text={text} />
-                    </div>
-                }
+              {translation && <p className="text-xl">{translations.translated}</p>}
+              {translation && (
+                <p className="text-base leading-8">{translation}</p>
+              )}
             </div>
 
-            <FileInput
-                inputFileRef={inputFileRef}
-                setInputImage={setInputImage}
-                setPage={setPage}
-                setText={setText}
-            />
-        </>
-    )
+            {/* Buttons for share, translate & summarize text  */}
+            <div className="flex-center flex-col md:flex-row gap-0 md:gap-3">
+              <ShareButton Text={text} />
+              {/* <TranslateButton /> */}
+              <SummarizeButton />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <FileInput
+        inputFileRef={inputFileRef}
+        setInputImage={setInputImage}
+        setPage={setPage}
+        setText={setText}
+      />
+    </>
+  );
 }

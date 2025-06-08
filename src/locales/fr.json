@@ -1,14 +1,16 @@
 {
-  "uploadFile": "Glissez-déposez une image pour la télécharger",
+  "uploadFile": "Glissez-déposez votre image ici pour la télécharger",
   "clickIt": "ou cliquez ici",
-  "dropFile": "Déposez le fichier",
+  "dropFile": "Déposez le fichier ici",
   "copy": "Copier",
   "share": "Partager",
   "copyedSuccessfully": "Copié avec succès",
+  "text": "Texte :",
   "translate": "Traduire",
-  "translated": "Traduit",
+  "translated": "Traduit :",
   "summarize": "Résumer",
-  "summarized": "Résumé",
+  "summarized": "Résumé :",
   "choiceLang": "Choisir la langue",
-  "github": "GitHub"
+  "github": "GitHub",
+  "summarizePopover": "Utilise l'IA Gemini pour résumer."
 }

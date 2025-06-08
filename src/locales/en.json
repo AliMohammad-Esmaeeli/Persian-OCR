@@ -1,14 +1,16 @@
 {
-  "uploadFile": "Drag and drop an image to upload",
+  "uploadFile": "Drag and drop your image to upload",
   "clickIt": "or click here",
   "dropFile": "Drop the file",
   "copy": "Copy",
   "share": "Share",
   "copyedSuccessfully": "Copied successfully",
+  "text": "Text:",
   "translate": "Translate",
-  "translated": "Translated",
+  "translated": "Translated:",
   "summarize": "Summarize",
-  "summarized": "Summarized",
+  "summarized": "Summarized:",
   "choiceLang": "Choose language",
-  "github": "GitHub"
+  "github": "GitHub",
+  "summarizePopover": "Uses Gemini AI to summarize."
 }

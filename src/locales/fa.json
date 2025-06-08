@@ -5,10 +5,12 @@
   "copy": "کپی کنید",
   "share": "اشتراک گذاری",
   "copyedSuccessfully": "با موفقیت کپی شد",
+  "text": "متن:",
   "translate": "ترجمه کردن",
-  "translated": "ترجمه شده",
+  "translated": "ترجمه شده:",
   "summarize": "خلاصه کردن",
-  "summarized": "خلاصه شده",
+  "summarized": "خلاصه شده:",
   "choiceLang": "زبان را انتخاب کنید",
-  "github": "گیت هاب"
+  "github": "گیت هاب",
+  "summarizePopover": "برای خلاصه کردن از هوش مصنوعی جمینای استفاده میکند"
 }
