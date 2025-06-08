@@ -1,7 +1,9 @@
+@import url("./buttons.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @font-face {
     font-family: yekanBakh;
@@ -14,13 +16,33 @@
         @apply text-base text-[#0d3c2c];
     }
 
+    .font-inter {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
     .flex-center {
         @apply flex justify-center items-center;
     }
-    .upload-component{
-        @apply  rounded-[0.875rem] border-[#d2b99f] border-dashed border-2 flex-center gap-3;
+
+    .flex-between {
+        @apply flex justify-between items-center;
     }
-    .rtl{
+
+    .flex-end {
+        @apply flex justify-end items-center;
+    }
+
+    .flex-start {
+        @apply flex justify-start items-center;
+    }
+
+    .upload-component {
+        @apply rounded-[0.875rem] border-[#d2b99f] border-dashed border-2 flex-center gap-3;
+    }
+
+    .rtl {
         direction: rtl;
     }
 }
