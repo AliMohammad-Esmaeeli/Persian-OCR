@@ -4,15 +4,10 @@
 @tailwind utilities;
 
 @layer utilities {
-    .button {
-        @apply !py-6 px-8 rounded-xl shadow-2xl bg-blue-600 mt-4 flex-center gap-2 cursor-pointer;
-    }
-
-    .switch {
-        @apply h-12 w-24 rounded-full bg-slate-200 mx-2 relative flex-center;
-    }
-
-    .square-button {
-        @apply !min-h-14 !min-w-14 rounded-3xl !bg-white/95 hover:shadow-lg border-0 relative flex-center cursor-pointer transition-all duration-300 ease-in-out;
-    }
+  .button {
+    @apply !py-6 px-8 rounded-xl shadow-2xl bg-blue-600 mt-4 flex-center gap-2 cursor-pointer;
+  }
+  .square-button {
+    @apply !min-h-14 !min-w-14 rounded-3xl !bg-white/95 hover:shadow-lg border-0 relative flex-center cursor-pointer transition-all duration-300 ease-in-out;
+  }
 }
