@@ -29,7 +29,7 @@ export default function FileInput(props: FileInputProps) {
 
             const fileURL = URL.createObjectURL(file);
             props.setInputImage(fileURL);
-            props.setPage("show");
+            props.setPage("ShowImage");
             props.setLoading(false);
           }
         }}
