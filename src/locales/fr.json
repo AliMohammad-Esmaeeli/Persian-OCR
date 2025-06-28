@@ -1,5 +1,5 @@
 {
-  "uploadFile": "Glissez-déposez votre image ici pour la télécharger",
+  "uploadFile": "Déposez votre image ici pour télécharger",
   "clickIt": "ou cliquez ici",
   "dropFile": "Déposez le fichier ici",
   "copy": "Copier",
@@ -12,5 +12,10 @@
   "summarized": "Résumé :",
   "choiceLang": "Choisir la langue",
   "github": "GitHub",
-  "summarizePopover": "Utilise l'IA Gemini pour résumer."
+  "summarizePopover": "Utilise l'IA Gemini pour résumer.",
+  "translatePopover": "Utilise l'IA Gemini pour traduire.",
+  "cookieTitle": "Cookie 🍪",
+  "cookieDescription": "Ce site web utilise des cookies.",
+  "warningLimitTitle": "Vous n'êtes pas autorisé à utiliser cette fonctionnalité !",
+  "warningLimitDescription": "Vous pouvez utiliser cette fonctionnalité trois fois par jour"
 }

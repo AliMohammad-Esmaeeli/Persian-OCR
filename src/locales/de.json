@@ -12,5 +12,10 @@
   "summarized": "Zusammengefasst:",
   "choiceLang": "Sprache wählen",
   "github": "GitHub",
-  "summarizePopover": "Verwendet Gemini KI, um zusammenzufassen."
+  "summarizePopover": "Verwendet Gemini KI, um zusammenzufassen.",
+  "translatePopover": "Verwendet Gemini AI zum Übersetzen.",
+  "cookieTitle": "Cookie 🍪",
+  "cookieDescription": "Diese Website verwendet Cookies.",
+  "warningLimitTitle": "Sie dürfen diese Funktion nicht verwenden!",
+  "warningLimitDescription": "Sie können diese Funktion dreimal täglich nutzen"
 }

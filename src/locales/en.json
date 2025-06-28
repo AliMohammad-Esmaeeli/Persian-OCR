@@ -12,5 +12,10 @@
   "summarized": "Summarized:",
   "choiceLang": "Choose language",
   "github": "GitHub",
-  "summarizePopover": "Uses Gemini AI to summarize."
+  "summarizePopover": "Uses Gemini AI to summarize.",
+  "translatePopover": "Uses Gemini AI to translate.",
+  "cookieTitle": "Cookie 🍪",
+  "cookieDescription": "This website use Cookies.",
+  "warningLimitTitle": "You are not allowed to use this feature!",
+  "warningLimitDescription": "You can use this feature three times a day"
 }
