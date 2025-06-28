@@ -1,8 +1,11 @@
-export default function Loading() {
+interface PropsTypes {
+  className?: string;
+}
+export default function Loading(props: PropsTypes) {
   return (
     <>
       <svg
-        className="mr-3 -ml-1 size-5 animate-spin text-white"
+        className={`mr-3 -ml-1 size-5 animate-spin text-white ${props.className}`}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -13,7 +16,7 @@ export default function Loading() {
           cy="12"
           r="10"
           stroke="currentColor"
-          stroke-width="4"
+          strokeWidth="4"
         ></circle>
         <path
           className="opacity-75"
