@@ -15,7 +15,6 @@ import {
 } from "@heroui/react";
 import { AddCookie, GetCookie } from "../Cookie/cookie";
 
-// https://restcountries.com/v3.1/all?fields=languages,flags
 
 export default function TranslateButton() {
   const languages = [

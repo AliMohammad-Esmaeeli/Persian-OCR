@@ -38,7 +38,7 @@ export default function Main() {
           <div className="w-1/2 flex flex-col">
             <div className="rtl flex flex-col gap-3">
               {text && <p className="text-xl">{translations.text}</p>}
-              <p className="text-base leading-8"> {text} </p>
+              <p className="text-base leading-8 font-yekanBakh"> {text} </p>
 
               {/* Displaying the summary and translation */}
 
