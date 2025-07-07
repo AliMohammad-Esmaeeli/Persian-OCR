@@ -7,7 +7,7 @@ export default function OnDragOver() {
   const { translations } = useLanguage();
   return (
     <>
-      <span className="flex-center flex-row-reverse gap-3">
+      <span className="flex-center flex-row-reverse rtl:flex-row gap-3">
         <img className="size-7 fill-white" src={addSvg} alt="" />
         <p className="text-base md:text-lg lg:text-xl truncate">
           {translations.dropFile}
