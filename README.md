@@ -112,14 +112,16 @@ Both the file input and `onDrop` provide a file, which you pass to the OCR funct
 
 Drag and drop components also have three different actions and for each one it shows a different page. We create every page and then in the page.tsx component show them with conditions.
 
+```
 src/
 ├── components/
 │ ├── input_components/
-│ └── page/
-│ ├── OnDragOver.tsx
-│ ├── ShowImage.tsx
-│ ├── Upload_section.tsx
-│ └── page.tsx
+│   └── page/
+│     ├── OnDragOver.tsx
+│     ├── ShowImage.tsx
+│     ├── Upload_section.tsx
+│     └── page.tsx
+```
 
 ## What is the OCR Function?
 
@@ -218,6 +220,7 @@ navigator.clipboard.writeText(...) // copy text
 ```
 
 ## Conclusion
+
 This Persian OCR tool makes it easy to extract, translate, and summarize text from images. With support for multiple languages and a user-friendly interface, it's ideal for preserving documents, researching historical texts, or processing foreign content.
 
 Try it out and let us know what you think! Contributions and feedback are always welcome.
