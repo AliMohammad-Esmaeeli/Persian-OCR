@@ -2,25 +2,25 @@
 
 **A web app for extracting, summarizing, and translating Persian text from images using Tesseract.js and Gemini AI.**
 
-> [!Note]
+> [!NOTE]
 > This app uses [Tesseract.js](https://github.com/naptha/tesseract.js) to convert images to text
 >
 > Also use Gemini Api to summarize and translate
 
 ## Abstract
 
-OCR is a revolutionary technology that helps preserve culture. It is a software that recognizes text from images. In other words, it converts images to text. This is useful for extracting valuable works from historic poets and writers.
+OCR is a revolutionary technology that helps preserve culture. It is software that recognizes text from images. In other words, it converts images to text. This is useful for extracting valuable works from historic poets and writers.
 
 ## Keywords
 
-Persian OCR, summarizing , translating , artificial intelligence, OCR, NLP, LLM
+Persian OCR, summarizing, translating, artificial intelligence, OCR, NLP, LLM
 
 ## Introduction
 
-Let's start with clone this repo & run project with:
+Let's start by cloning this repo & run project with:
 
 ```bash
-git clone
+git clone https://github.com/AliMohammad-Esmaeeli/Persian-OCR.git
 cd Persian-OCR
 npm install
 npm run dev
@@ -31,8 +31,8 @@ Dependencies that we need and use:
 - Axios
 - Tesseract.js
 - Zustand
-- Hero Ui
-- HatScripts circle-flags
+- HeroUI
+- HatScripts/circle-flags
 - Hero icons
 
 ## Discussion
@@ -112,7 +112,7 @@ Both the file input and `onDrop` provide a file, which you pass to the OCR funct
 
 Drag and drop components also have three different actions and for each one it shows a different page. We create every page and then in the page.tsx component show them with conditions.
 
-```
+```text
 src/
 ├── components/
 │ ├── input_components/
@@ -123,7 +123,7 @@ src/
 │     └── page.tsx
 ```
 
-## What is the OCR Function?
+### What is the OCR Function?
 
 ![recognized image](./screenshots/recognized%20image%20screenshot.png)
 
@@ -131,7 +131,7 @@ src/
 > We use [Tesseract.js](https://github.com/naptha/tesseract.js), a powerful library that supports **100+ languages** and works with many programming languages.
 
 ```tsx
-const OCR = async (Image: any) => {
+const OCR = async (Image: File) => {
   const worker = await createWorker("fas");
   const result = await worker.recognize(Image);
   setText(result.data.text);
@@ -144,12 +144,12 @@ It returns the recognized text, which you can use anywhere.
 To display the uploaded image, use:
 `URL.createObjectURL(file);`
 
-### Summerize and Translate
+### Summarize and Translate
 
 ![summerized text](./screenshots/summerized%20text.png)
 
-> [!Note]
-> We use Gemini api for summerize and translate.
+> [!NOTE]
+> We use Gemini api for Summarize and translate.
 >
 > Axios is the best api fetcher.
 
@@ -160,7 +160,7 @@ const response = await axios.post(BACKEND_URL, {
       parts: [
         {
           text: `Summarize the following text in persian: ${text}`,
-          // for translate this is the prompt:
+          // For translation, use this prompt
           //  `Translate the following text in ${selectedLanguage}: ${text}`
         },
       ],
@@ -173,7 +173,11 @@ const response = await axios.post(BACKEND_URL, {
 });
 ```
 
-you have gemini api key so you have to defined it in the .env file. The you can call it by this code:
+You need a Gemini API key so you have to defined it in the .env file. Then you can call it by this code:
+
+```.env
+GEMINI_API_KEY=your_api_key_here
+```
 
 ```tsx
 const BACKEND_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${
@@ -181,7 +185,7 @@ const BACKEND_URL = `https://generativelanguage.googleapis.com/v1beta/models/gem
 }`;
 ```
 
-## Change Language
+### Change Language
 
 ![change language button](./screenshots/change%20language%20button%20screenshot.png)
 
