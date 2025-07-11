@@ -21,8 +21,17 @@ Let's start by cloning this repo & run project with:
 
 ```bash
 git clone https://github.com/AliMohammad-Esmaeeli/Persian-OCR.git
+```
+
+```bash
 cd Persian-OCR
+```
+
+```bash
 npm install
+```
+Finally:
+```bash
 npm run dev
 ```
 
