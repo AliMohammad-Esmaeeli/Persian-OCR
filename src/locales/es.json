@@ -1,0 +1,21 @@
+{
+  "uploadFile": "Arrastra y suelta tu imagen para subirla",
+  "clickIt": "o haz clic aquí",
+  "dropFile": "Suelta el archivo",
+  "copy": "Copiar",
+  "share": "Compartir",
+  "copyedSuccessfully": "Copiado con éxito",
+  "text": "Texto:",
+  "translate": "Traducir",
+  "translated": "Traducido:",
+  "summarize": "Resumir",
+  "summarized": "Resumido:",
+  "choiceLang": "Elige idioma",
+  "github": "GitHub",
+  "summarizePopover": "Usa Gemini AI para resumir.",
+  "translatePopover": "Usa Gemini AI para traducir.",
+  "cookieTitle": "Cookie 🍪",
+  "cookieDescription": "Este sitio web utiliza Cookies.",
+  "warningLimitTitle": "¡No tienes permitido usar esta función!",
+  "warningLimitDescription": "Puedes usar esta función tres veces al día"
+}

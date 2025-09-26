@@ -3,12 +3,13 @@ import Farsi from "./fa.json";
 import English from "./en.json";
 import French from "./fr.json";
 import German from "./de.json";
+import Spanish from "./es.json";
 
 interface langType {
   language: string;
   setLanguage: (language: string) => void;
   reset: () => void;
-  translations: typeof Farsi; 
+  translations: typeof Farsi;
 }
 
 export const useLanguage = create<langType>((set) => ({
@@ -29,6 +30,8 @@ function getTranslations(language: string) {
       return French;
     case "de":
       return German;
+    case "es":
+      return Spanish;
     default:
       return Farsi;
   }
